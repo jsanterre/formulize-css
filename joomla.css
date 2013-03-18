@@ -1,6 +1,13 @@
 /* Formulize css */
+/* There's two type of form : 
+Entries: list of all entries this already has an id of 'listofentries'
+Regular: to make an entry this already has an id of 'formulizeform'
 
-/* I am totally not done here!!!!!!!!!!!!!!*/
+maybe should change if renderscreen... something a bit more descriptive....
+
+could make parameter odd and even and head
+*/
+
 /*
 For testing!
 #formulize_form {
@@ -12,15 +19,118 @@ For testing!
 }
 */
 
+/* The form's bottom part and the regular form*/
+#resbox, #formulizeform {
+	min-width: 837px !important;
+}
+
+#resbox table tbody{
+	
+}
+
+.head  {
+	
+}
+
+#resbox table * {
+	/*border-width: 5px !important;
+	border-color: white;*/
+}
+
 #formulize_form * {
 	/*background-color: transparent;*/
 }
 
+/* David tags */
+
+/* Title of the form Entries in a small box
+   Could change this id for id = "titleEntries"
+   and move the id lower in the tree?
+*/
+#fillInTable h1{
+	color: black !important;
+	font-weight: bold !important;
+	font-size: 1.8em !important;
+} 
+
+
+.outerTable {
+	
+} 
+
+.innerTable {
+	
+} 
+
+
+#actionsTable {
+	color: black;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#currentViewSelectTable {
+	color: black;
+	font-weight: bold;
+	font-size: 1.1em;
+} 
+
+#currentViewSelectTable #currentview{
+	color: black;
+	font-size: 0.8em !important;
+} 
+
+
+#listofentries #leftButtonColumn {
+	
+	
+}
+
+
+#middleButtonColumn {
+	
+} 
+
+#rightButtonColumn {
+	
+} 
+
+/*second column*/
+#temp1 {
+	background: white;
+} 
+
+/*very first column*/
+#temp2 {
+	color: black;
+	font-weight: bold;
+	font-size: 1.1em;
+	background: white;
+} 
+
+/* End of David's tags */
+
+#formulize_form  #listofentries a {
+	color: #666666;
+	font-weight: bold;
+	font-size: 14px;
+}
 
 #formulize_form table tr, #formulize_form table, #formulize_form table h1 {
 	border: none !important;
-	background: #ffffff !important;
+	/*background: #ffffff !important;*/
 	background-image: none !important; 
+}
+
+/* for atomic, need to add white border... */
+.even.column {
+	/*border: 1px;
+	border-color: white !important;*/
+
+}
+
+.outer .even td{
+	background: #80C3DD !important;
 }
 
 #formulize_form tbody tr td {
@@ -31,7 +141,7 @@ For testing!
 	background-color: #8FBE58;
 	padding: 5px;
 	font-weight: bold;
-	border-top: 3px solid #CCCCCC;
+	/*border-top: 3px solid #CCCCCC;*/
 }
 #formulize_form .head center {
 	width: 150px;
@@ -40,13 +150,13 @@ For testing!
 	background-color: #A4E2F7;
 	color:black;
 	padding: 5px;
-	border-top: 3px solid #cccccc;
+	/*border-top: 3px solid #cccccc;*/
 }
 #formulize_form #formulizeform .even {
 	background-color: #80C3DD;
 	color:black;
 	padding: 5px;
-	border-top: 3px solid #cccccc;
+	/*border-top: 3px solid #cccccc;*/
 }
 #formulize_form .odd.column {
 	background-color: #80C3DD;
@@ -55,36 +165,30 @@ For testing!
 #formulize_form .odd {
 	color:black;
 	padding: 5px;
-	border-top: 3px solid #CCCCCC;
+	/*border-top: 3px solid #CCCCCC;*/
 	background-color: white
 }
 #formulize_form tr.even td {
 	color:black;
 	padding: 5px;
-	border-top: 3px solid #CCCCCC;
+	/*border-top: 3px solid #CCCCCC;*/
 }
 #formulize_form tr.odd td {
 	color:black;
 	padding: 5px;
-	border-top: 3px solid #CCCCCC;
+	/*border-top: 3px solid #CCCCCC;*/
 	background-color: white;	
 }
-#formulize_form table td {
-	padding: 0;
-	border-width: 0;
-	vertical-align: top;
-}
+
+
+
+
+
+
 #formulize_form th {
 	font-size: large;
 }
-#formulize_form #listofentries h1, b, tr {
-	color: black;
-}
-#formulize_form  #listofentries a {
-	color: #666666;
-	font-weight: bold;
-	font-size: 14px;
-}
+
 .xoops-form-element-caption {
 	color: #6d6666;
 }
@@ -119,7 +223,7 @@ For testing!
 #formulize_form .formulize_button {
 	color: white;
 	height: 27px;
-	width: 163px;
+	width: 163px;*/
 	font-size: 12px;
 	border-color: #cccccc;
     text-shadow: 0 -1px 0 rgba(0,0,0,.4);    
@@ -130,13 +234,13 @@ For testing!
 	padding: 0 1.5em;
 	background: url(images/contact-new.png) no-repeat left center;
 	background-color: #2F85DC;
-	width: 190px !important;
+	width: 190px;
 }
 #formulize_form #formulize_addMultiButton {
 	padding: 0 1.5em;
 	background: url(images/multi.png) no-repeat left center;
 	background-color: #2F85DC;
-	width: 190px !important;
+	width: 190px;
 }
 #formulize_form #formulize_changeColsButton {
 	padding: 0 1.5em;
@@ -203,10 +307,6 @@ For testing!
 	background: url(images/notif.png) no-repeat left center;
 	background-color: #5450A5;
 }
-#formulize_form #printbutton {
-	vertical-align: top;
-	margin: -10px 0 0 0 !important;
-}
 
 /* Formulize Boutons by Francois T */
 
@@ -226,5 +326,18 @@ For testing!
 	border-color : #333;
 }
 
+/* Essential
+Known issue clean fix*/
 
+/* For Atomic*/
+/* add white border*/
+#formulize_form table tbody td {
+	border: 1px solid white;
+	vertical-align: top;
+}
 
+/*Remove border from top table in regular form*/
+#formulize_form table.outer tbody tr td.even table tbody tr td {
+	/*padding: 0;*/
+	border: none;/*1px solid green !important;*/
+}
