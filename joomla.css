@@ -24,8 +24,12 @@ Styling applied to both forms
 Make sure forms fill the space
  */
 #resbox, #formulizeform {
-	min-width: 837px !important;
+	min-width: 900px !important;
 }
+#resbox table{
+	width:100%;
+}
+
 /* 
 Make sure the form as a white grid
 */
@@ -75,8 +79,9 @@ Set the fonts and make sure to keep the background white in the upper part of th
 } 
 
 /* 
-Set the font in the lower part of the form Entries
+Set the font and the filling color of the lower part of the form Entries
 */
+
 #formulize_form  #listofentries a {
 	color: #666666;
 	font-weight: bold;
@@ -86,20 +91,13 @@ Set the font in the lower part of the form Entries
 	text-decoration: none;
 }
 
-
-
-
-.outer .even td{
-	/*background: #80C3DD !important;*/
+#formulize_form .head center {
+	max-width: 150px;
 }
-
 #formulize_form .head {
 	background-color: #8FBE58;
 	padding: 5px;
 	font-weight: bold;
-}
-#formulize_form .head center {
-	width: 150px;
 }
 #formulize_form .even {
 	background-color: #A4E2F7;
@@ -113,13 +111,14 @@ Set the font in the lower part of the form Entries
 }
 #formulize_form .odd.column {
 	background-color: #80C3DD;
-	width: 100%;
 }
+
 #formulize_form .odd {
 	color:black;
 	padding: 5px;
-	background-color: white
+	background-color: white;
 }
+
 #formulize_form tr.even td {
 	color:black;
 	padding: 5px;
@@ -129,13 +128,14 @@ Set the font in the lower part of the form Entries
 	padding: 5px;
 	background-color: white;	
 }
-
-#formulize_form th {
-	font-size: large;
+#formulize_form #formulizeform th {
+	font-size: 1.8em;
 }
 
-.xoops-form-element-caption {
-	color: #6d6666;
+#formulize_form .xoops-form-element-caption {
+	color: black;
+	font-weight: bold;
+	font-size: 1.2em;
 }
 #formulize_form .xoops-form-element-caption .caption-marker {
 	display: none;
