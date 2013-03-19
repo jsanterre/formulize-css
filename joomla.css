@@ -1,87 +1,65 @@
-/* Formulize css */
-/* There's two type of form : 
-Entries: list of all entries this already has an id of 'listofentries'
-Regular: to make an entry this already has an id of 'formulizeform'
+/*************
+Formulize css
+**************/
 
-maybe should change if renderscreen... something a bit more descriptive....
+/******************************************************
+General Notes:
+The form of type "Entries" has an id of 'listofentries'
+The form of type "Regular" has an id of 'formulizeform'
+*******************************************************/
 
-could make menu item parameter color $odd and $even
+/**********************************
+Style the upper part of both forms
+***********************************/
 
-David tags: 
-
-Used: #fillInTable, #actionsTable, #currentViewSelectTable, #temp1, temp2
-
-Unused: .outerTable, .innertable, #leftButtonColumn, #middleButtonColumn, #rightButtonColumn
-
-
-*/
-
-/*
-Styling applied to both forms
-*/
-
-/* 
-Make sure forms fill the space
- */
-#resbox, #formulizeform {
-	min-width: 900px !important;
-}
-#resbox table{
-	width:100%;
-}
-
-/* 
-Make sure the form as a white grid
-*/
-#formulize_form table tbody td {
-	border: 1px solid white;
-	vertical-align: top;
-}
-#formulize_form table.outer tbody tr td.even table tbody tr td, #formulize_form table tr {
-	border: none;
-}
-
-/*
-Styling applied to form Entries
-*/
-
-/* 
-Set the fonts and make sure to keep the background white in the upper part of the form Entries
- */
-#formulize_form #fillInTable h1{
+/* Set the fonts and make sure the background stays white */
+#formulize_form #listofentries #fillInTable h1{
 	color: black;
 	font-weight: bold;
 	font-size: 1.8em;
 	border: none;
 } 
-#formulize_form #actionsTable {
-	color: black;
-	font-weight: bold;
-	font-size: 1.1em;
+#formulize_form #listofentries #fillInTable {
+	background-color: white;
+	border-color: white;
 }
-#formulize_form #currentViewSelectTable {
+#formulize_form #listofentries #actionsTable, #formulize_form #listofentries #temp1, #formulize_form #listofentries #temp2, #formulize_form #listofentries #currentViewSelectTable {
 	color: black;
 	font-weight: bold;
 	font-size: 1.1em;
-} 
-#formulize_form #currentViewSelectTable #currentview{
+	background-color: white;
+	border-color: white;
+}
+#formulize_form #listofentries #currentViewSelectTable #currentview{
 	color: black;
 	font-size: 0.8em;
 } 
-#formulize_form #temp1 {
-	background: white;
-} 
-#formulize_form #temp2 {
+#formulize_form #formulizeform th {
+	font-size: 1.8em;
 	color: black;
 	font-weight: bold;
-	font-size: 1.1em;
-	background: white;
-} 
+}
 
-/* 
-Set the font and the filling color of the lower part of the form Entries
-*/
+/**********************************
+Style the lower part of both forms
+***********************************/
 
+/* Make sure the forms fill the available space */
+#resbox, #formulizeform {
+	min-width: 900px;
+}
+#resbox table{
+	width:100%;
+}
+/* Make sure the forms as a white grid */
+#formulize_form table tbody td {
+	border: 2px solid white;
+	vertical-align: top;
+}
+#formulize_form table.outer tbody tr td.even table tbody tr td, #formulize_form table tr {
+	border: none;
+}
+/* Set the fonts and the table cells color */
 #formulize_form  #listofentries a {
 	color: #666666;
 	font-weight: bold;
@@ -89,10 +67,6 @@ Set the font and the filling color of the lower part of the form Entries
 }
 #formulize_form  #listofentries a:link {
 	text-decoration: none;
-}
-
-#formulize_form .head center {
-	max-width: 150px;
 }
 #formulize_form .head {
 	background-color: #8FBE58;
@@ -109,16 +83,14 @@ Set the font and the filling color of the lower part of the form Entries
 	color:black;
 	padding: 5px;
 }
-#formulize_form .odd.column {
+#formulize_form .odd.column, .outer .even td{
 	background-color: #80C3DD;
 }
-
 #formulize_form .odd {
 	color:black;
 	padding: 5px;
 	background-color: white;
 }
-
 #formulize_form tr.even td {
 	color:black;
 	padding: 5px;
@@ -128,10 +100,6 @@ Set the font and the filling color of the lower part of the form Entries
 	padding: 5px;
 	background-color: white;	
 }
-#formulize_form #formulizeform th {
-	font-size: 1.8em;
-}
-
 #formulize_form .xoops-form-element-caption {
 	color: black;
 	font-weight: bold;
@@ -143,13 +111,7 @@ Set the font and the filling color of the lower part of the form Entries
 #formulize_form .xoops-form-element-help {
 	font-weight: normal;
 }
-#formulize_form tbody {
-  border-top: 0 solid white;
-}
-#formulize_form #currentview {
-    width: 450px;
-    font-size: 1.2em;
-}
+/* Make sure the column are displayed correctly */
 #formulize_form .floating-column {
     position: fixed;
     border: 1px solid white;
@@ -163,8 +125,10 @@ Set the font and the filling color of the lower part of the form Entries
     
 }
 
-/* Formulize Button css */
-
+/****************
+Style the buttons
+*****************/ 
+/* Set colors and add images to the buttons */
 #formulize_form .formulize_button {
 	color: white;
 	height: 27px;
@@ -252,9 +216,7 @@ Set the font and the filling color of the lower part of the form Entries
 	background: url(images/notif.png) no-repeat left center;
 	background-color: #5450A5;
 }
-
-/* Formulize Boutons by Francois T */
-
+/* Formulize buttons by Francois T */
 #formulize_form button, #formulizeform input[type='submit'], #formulizeform input[type='button'], #formulizeform input[type='reset'] {
 	background-color: #F4F9FE;
 	-webkit-border-radius: 5px;
@@ -270,7 +232,3 @@ Set the font and the filling color of the lower part of the form Entries
 	background-color: #f4f4f4;
 	border-color : #333;
 }
-
-
-
-
