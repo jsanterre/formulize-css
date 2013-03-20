@@ -1011,7 +1011,7 @@ function drawInterface($settings, $fid, $frid, $groups, $mid, $gperm_handler, $l
 			print "</table></div>";
 		}	
 	
-		print "<table cellpadding=10><tr><td id='fillInTable' style=\"vertical-align: top;\" width=100%>";
+		print "<table cellpadding=10><tr><td id='titleTable' style=\"vertical-align: top;\" width=100%>";
 		
 		print "<h1>" . trans($title) . "</h1>";
 	
@@ -1029,7 +1029,7 @@ function drawInterface($settings, $fid, $frid, $groups, $mid, $gperm_handler, $l
 	 * could define the inner tables and the outer tables.
 	 */
 	
-				print "<td id='actionsTable' class='outerTable' rowspan=3  style=\"vertical-align: bottom;\">";	      
+				print "<td id='buttonsTable' class='outerTable' rowspan=3  style=\"vertical-align: bottom;\">";	      
 		
 				print "<table><tr><td id='leftButtonColumn' class='innerTable' style=\"vertical-align: bottom;\">";
 		
@@ -1080,26 +1080,11 @@ function drawInterface($settings, $fid, $frid, $groups, $mid, $gperm_handler, $l
 			} // end of if controls are locked
 
 			// cell for add entry buttons
-			
-			
-			
-			
-			
-			
-			
-			//LAST ENTRY MODIFIED! REMOVE TEMP1 AND TEMP2. EMBED IN DIV AND DECLARE CLASSES?
-			
-			
-			
-			
-			
-			
-			
-			print "<tr><td id='temp1' style=\"vertical-align: top;\">\n";
+			print "<tr><td id='outerAddEntryPanel' style=\"vertical-align: top;\">\n";
 
 			if(!$settings['lockcontrols']) {
 				// added October 18 2006 -- moved add entry buttons to left side to emphasize them more
-				print "<table><tr><td id='temp2' style=\"vertical-align: bottom;\"><p>\n";
+				print "<table><tr><td id='innerAddEntryPanel' style=\"vertical-align: bottom;\"><p>\n";
 	
 				$addButton = $buttonCodeArray['addButton'];
 				$addMultiButton = $buttonCodeArray['addMultiButton'];
